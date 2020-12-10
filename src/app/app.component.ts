@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import * as firebase from 'firebase';
+// import core firebase client (required)
+import firebase from 'firebase/app';
+
 
 @Component({
   selector: 'app-root',
@@ -8,14 +10,17 @@ import * as firebase from 'firebase';
 })
 export class AppComponent {
   constructor() {
+    // Your web app's Firebase configuration
     var firebaseConfig = {
-      apiKey: "AIzaSyBLxBFukj4DKKE8uiC2aYUvVG1G9ZUDy8A",
-      authDomain: "bookshelves-uq.firebaseapp.com",
-      projectId: "bookshelves-uq",
-      storageBucket: "bookshelves-uq.appspot.com",
-      messagingSenderId: "1037503422080",
-      appId: "1:1037503422080:web:09a3b44876c10ded675065"
+      apiKey: "AIzaSyDXuKIepwhoIZn8K-C44dWfmnUUtGk_FUc",
+      authDomain: "uq-bookshelves.firebaseapp.com",
+      databaseURL: "https://uq-bookshelves-default-rtdb.firebaseio.com",
+      projectId: "uq-bookshelves",
+      storageBucket: "uq-bookshelves.appspot.com",
+      messagingSenderId: "747337929587",
+      appId: "1:747337929587:web:f7cee046db2aedcc52ab06"
     };
-    firebase.default.initializeApp(firebaseConfig);
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
   }
 }
